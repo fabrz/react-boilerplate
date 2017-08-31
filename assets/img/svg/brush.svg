@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="102px" viewBox="0 0 100 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>Brush</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Start-Page" transform="translate(-573.000000, -288.000000)">
+            <g id="Section-01" transform="translate(-896.000000, 65.000000)">
+                <g id="Brush" transform="translate(1469.000000, 223.000000)">
+                    <path d="M16.9622272,73.6433784 C13.6245632,74.671244 10.1681521,76.3642352 7.42098703,79.1425821 C-0.459411775,87.1122231 0.483687166,100.987999 0.483687166,100.987999 C0.483687166,100.987999 14.2037336,101.941803 22.0843347,93.9717529 C24.8312975,91.1936106 26.505288,87.6979674 27.52182,84.3222145 L16.9622272,73.6433784 L16.9622272,73.6433784 Z" id="Shape" fill="#BFC302"></path>
+                    <polygon id="Shape" fill="#E6E6E6" points="32.0174201 52.1940493 16.9600019 73.6409233 16.9622272 73.6433784 27.5216177 84.3224191 27.5238429 84.3246696 48.7300153 69.0963416"></polygon>
+                    <rect id="Rectangle-path" fill="#B3B3B3" transform="translate(43.290299, 57.696402) rotate(225.000000) translate(-43.290299, -57.696402) " x="31.4726462" y="53.5245232" width="23.6353055" height="8.34375809"></rect>
+                    <polygon id="Shape" fill="#E74C0F" points="99.8934363 8.90114421 91.5370375 0.44989579 37.8509988 46.2938471 54.5639987 63.1965486"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

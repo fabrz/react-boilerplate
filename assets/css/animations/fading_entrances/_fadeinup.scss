@@ -1,0 +1,19 @@
+@mixin fadeinup {
+    @at-root {
+        @keyframes fadeinup {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    }
+
+    animation-fill-mode: both;
+    animation-name: fadeinup;
+    animation-duration: 0.75s;
+}

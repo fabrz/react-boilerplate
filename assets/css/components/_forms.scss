@@ -1,0 +1,165 @@
+// -----------------------------------------------------------------------------
+// This file contains all form styles.
+// -----------------------------------------------------------------------------
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea,
+select {
+    @include fsBody;
+
+    border: none;
+    border-radius: $baseSpacing $baseSpacing $baseSpacing/2 $baseSpacing;
+    color: $bayOfMany;
+    outline: none;
+    width: 100%;
+    font-size: $baseFontSize;
+    padding: $baseSpacing/2 $baseSpacing;
+    margin-bottom: $baseSpacing;
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    text-align: left;
+}
+
+select {
+    appearance: none;
+    background-color: $white;
+}
+
+// Base form styles
+textarea {
+    min-height: 200px;
+    resize: vertical;
+    overflow: auto;
+}
+
+form p {
+    margin-bottom: $baseSpacing/2;
+}
+
+form p:last-child {
+    margin-bottom: 0;
+}
+
+.base-form {
+    @include cf;
+
+    width: 100%;
+
+    &__label {
+        display: block;
+        color: $white;
+        margin-bottom: $baseSpacing/2;
+    }
+}
+
+// Input Date
+input[type=date] {
+    -webkit-appearance: none;
+}
+
+input::-webkit-datetime-edit {
+    text-transform: uppercase;
+}
+
+input::-webkit-inner-spin-button {
+    height: auto;
+}
+
+input::-webkit-calendar-picker-indicator,
+input::-webkit-datetime-edit-day-field,
+input::-webkit-datetime-edit-month-field,
+input::-webkit-datetime-edit-year-field,
+input::-webkit-datetime-edit-fields-wrapper {
+    padding: 3px;
+}
+
+// Remove Focus Boxes
+select:focus {
+    outline: none;
+}
+
+// Base Label Styles
+label {
+    display: block;
+}
+
+label + input[type=checkbox] + label {
+    margin-top: $baseSpacing;
+}
+
+// Style Placeholders
+::-webkit-input-placeholder {
+    color: lighten($boulder, 20%);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: lighten($boulder, 20%);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: lighten($boulder, 20%);
+}
+
+:-ms-input-placeholder {
+    color: lighten($boulder, 20%);
+}
+
+// Errors
+.error {
+    margin-top: $baseSpacing/2;
+    color: $thunderbird;
+
+    svg {
+        fill: $thunderbird;
+    }
+}
+
+// Override Select Component Style
+.Select {
+    &-control {
+        border-radius: $baseSpacing $baseSpacing $baseSpacing/2 $baseSpacing;
+    }
+
+    &--multi {
+        margin-bottom: $baseSpacing;
+
+        .Select-value {
+            margin: $baseSpacing/4;
+            background-color: $bayOfMany;
+            padding: $baseSpacing/4;
+            color: $white;
+            border: none;
+            border-radius: $baseSpacing;
+
+            &-icon {
+                float: right;
+                width: 23px;
+                height: 23px;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                font-size: 20px;
+                color: $bayOfMany;
+                border-right: none;
+                border-radius: 50%;
+                padding: 1px 4px 3px;
+                background-color: $white;
+                transition: all 0.3s ease;
+            }
+        }
+
+        .Select-multi-value-wrapper {
+            vertical-align: middle;
+        }
+    }
+}

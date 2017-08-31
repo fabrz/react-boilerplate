@@ -1,0 +1,16 @@
+@mixin fadeout {
+    @at-root {
+        @keyframes fadeout {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+    }
+
+    animation-fill-mode: both;
+    animation-name: fadeout;
+}

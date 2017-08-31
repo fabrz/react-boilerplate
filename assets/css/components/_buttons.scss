@@ -1,0 +1,98 @@
+// -----------------------------------------------------------------------------
+// This file contains general buttons style
+// -----------------------------------------------------------------------------
+
+@mixin button-theme($btn-bg-color) {
+    background-color: $btn-bg-color;
+}
+
+// Base Button Themes
+#{$button-inputs} {
+    @include fsBody;
+    @include button-theme($thunderbird);
+
+    font-size: $baseFontSize;
+    appearance: none;
+    outline: none;
+    border-radius: 100px;
+    border: 0;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    padding: 18px 40px;
+    margin-bottom: $baseSpacing;
+    text-decoration: none;
+    text-align: center;
+    user-select: none;
+    vertical-align: middle;
+    width: auto;
+    position: relative;
+    transition: all 0.5s ease-out;
+
+    &.is-disabled,
+    &[disabled="disabled"],
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.button {
+    &__icon {
+        padding: 16px 20px;
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            fill: currentColor;
+            position: relative;
+            top: -2px; // Sub-pixel rounding fun
+
+            @include breakpoint(large) {
+                width: 22px;
+                height: 22px;
+            }
+
+            &--before {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &--large {
+        font-size: 1.125em;
+        padding: 22px 32px;
+    }
+
+    &--small {
+        font-size: 0.75em;
+        padding: 12px 20px;
+    }
+
+    &--primary {
+        @include button-theme($thunderbird);
+    }
+
+    &--secondary {
+        @include button-theme(transparent);
+    }
+
+    &--tertiary {
+        @include button-theme($jacarta);
+    }
+
+    &--link {
+        @include button-theme(transparent);
+
+        color: $white;
+        padding: 18px 0;
+        text-decoration: underline;
+    }
+
+    &--fullwidth {
+        width: 100%;
+    }
+}

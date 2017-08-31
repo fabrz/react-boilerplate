@@ -1,0 +1,18 @@
+@mixin fadeinleftbig {
+    @at-root {
+        @keyframes fadeinleftbig {
+            from {
+                opacity: 0;
+                transform: translate3d(-2000px, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    }
+
+    animation-fill-mode: both;
+    animation-name: fadeinleftbig;
+}

@@ -1,0 +1,17 @@
+@mixin fadeoutright {
+    @at-root {
+        @keyframes fadeoutright {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                transform: translate3d(100%, 0, 0);
+            }
+        }
+    }
+
+    animation-fill-mode: both;
+    animation-name: fadeoutright;
+}

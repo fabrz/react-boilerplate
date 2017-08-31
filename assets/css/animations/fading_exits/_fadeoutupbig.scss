@@ -1,0 +1,18 @@
+@mixin fadeinupbig {
+    @at-root {
+        @keyframes fadeinupbig {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 2000px, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    }
+
+    animation-fill-mode: both;
+    animation-name: fadeinupbig;
+}

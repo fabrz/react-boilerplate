@@ -1,0 +1,146 @@
+// -----------------------------------------------------------------------------
+// This file contains all typography styles.
+// -----------------------------------------------------------------------------
+
+html {
+    @include fsBody;
+
+    color: $white;
+    -webkit-font-smoothing: antialiased;
+    font-size: $baseFontSize;
+    line-height: 20px;
+}
+
+// Headings (Modular Major Second Typographical scale: http://type-scale.com/)
+h1, h2, h3, h4, h5, h6 {
+    @include fsHeaders;
+
+    margin: 0 0 $baseSpacing/2 0;
+    text-rendering: optimizeLegibility;
+}
+
+h1, .h1 {
+    font-size: 40px;
+    line-height: 41px;
+    letter-spacing: -1px;
+
+    @include breakpoint(medium) {
+        font-size: 60px;
+        line-height: 63px;
+        letter-spacing: -2px;
+    }
+}
+
+h2, .h2 {
+    font-size: 36px;
+    line-height: 38px;
+    letter-spacing: -1px;
+
+    @include breakpoint(medium) {
+        font-size: 46px;
+        line-height: 49px;
+        letter-spacing: -2px;
+    }
+}
+
+h3, .h3 {
+    font-size: 18px;
+    line-height: $baseLineHeight;
+
+    @include breakpoint(medium) {
+        font-size: 22px;
+        line-height: 22px;
+    }
+}
+
+h4, .h4 {
+    font-size: 18px;
+}
+
+small {
+    display: block;
+    font-size: 0.833em;
+}
+
+// Body text
+p {
+    margin: 0 0 $baseSpacing 0;
+}
+
+strong {
+    @include fsStrong;
+}
+
+// Module level
+article p {
+    &:last-child {
+        margin: 0;
+    }
+
+    h1, h2, h3, h4 {
+        margin-top: $baseSpacing;
+    }
+}
+
+// Anchor Links
+a {
+    text-decoration: underline;
+    transition: all 0.2s ease-out;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    > svg {
+        fill: currentColor;
+        transition: fill 0.2s ease-out;
+    }
+}
+
+// Definition Lists
+dl {
+    &:not(:last-child) {
+        margin: 0 0 $baseSpacing 0;
+    }
+}
+
+dt {
+    @include fsHeaders;
+}
+
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+// Misc
+hr {
+    position: relative;
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #fff;
+}
+
+ul li {
+    list-style: none;
+}
+
+// colors
+.java {
+    color: $java;
+}
+
+.bay-of-many {
+    color: $bayOfMany;
+}
+
+.gold {
+    color: $gold;
+}
+
+// transform
+.uppercase {
+    text-transform: uppercase;
+}

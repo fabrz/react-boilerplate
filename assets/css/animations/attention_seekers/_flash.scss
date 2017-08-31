@@ -1,0 +1,16 @@
+@mixin flash {
+    @at-root {
+        @keyframes flash {
+            from, 50%, to {
+                opacity: 1;
+            }
+
+            25%, 75% {
+                opacity: 0;
+            }
+        }
+    }
+
+    animation-fill-mode: both;
+    animation-name: flash;
+}

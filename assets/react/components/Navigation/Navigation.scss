@@ -1,0 +1,168 @@
+@import './assets/css/utils/variables';
+@import './assets/css/utils/rems';
+@import './assets/css/utils/mixins';
+@import './assets/css/base/colors';
+@import './assets/css/base/fonts';
+@import './assets/css/base/base';
+
+.navigation {
+    position: relative;
+    background-color: $white;
+
+    .logo__button svg {
+        width: 150px;
+        height: 35px;
+
+        @include breakpoint(medium) {
+            width: 198px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+        @include breakpoint(medium) {
+            margin: $baseSpacing/2;
+        }
+
+        .logo {
+            display: flex;
+            width: 100%;
+            padding: $baseSpacing 0;
+
+            @include breakpoint(large) {
+                padding: 0;
+                flex: 0 1 auto;
+                width: auto;
+            }
+
+            button {
+                display: inline-flex;
+                width: 45px;
+                height: 37px;
+                padding: 0;
+                background: none;
+                border-radius: 0;
+                margin: 0;
+
+                @include breakpoint(large) {
+                    display: none;
+                }
+
+                .icon {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &.logo__button {
+                    display: inline-flex;
+                    width: 100%;
+
+                    @include breakpoint(large) {
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .items {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 320px;
+            background-color: $white;
+            z-index: 11;
+            margin: 0;
+            list-style: none;
+            text-align: left;
+            padding-top: $baseSpacing*4;
+            transform: translateX(100%);
+            transition: transform 0.2s cubic-bezier(0.32, 0.29, 0.06, 0.83);
+
+            @include breakpoint(large) {
+                position: relative;
+                padding-top: 0;
+                flex: 0 1 auto;
+                width: 100%;
+                margin: 18px 0;
+                text-align: right;
+                top: auto;
+                right: auto;
+                height: auto;
+                transform: none;
+                background-color: transparent;
+            }
+
+            &.active {
+                transform: translateX(0);
+            }
+
+            li {
+                display: block;
+                margin-bottom: $baseSpacing;
+
+                @include breakpoint(large) {
+                    display: inline-flex;
+                    margin-bottom: 0;
+                }
+
+                button {
+                    @include fsBody;
+
+                    margin: 0;
+                    background: none;
+                    border-radius: 0;
+                    padding: $baseSpacing/2;
+                    border-bottom: 2px solid transparent;
+                    text-decoration: none;
+                    color: $jacarta;
+                    font-size: 18px;
+                    line-height: 24px;
+                    text-transform: uppercase;
+
+                    @include breakpoint(medium) {
+                        font-size: $baseFontSize;
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &.active {
+                        border-bottom: 2px solid $thunderbird;
+                    }
+                }
+
+                &:first-child {
+                    display: inline-block;
+                    position: absolute;
+                    top: $baseSpacing;
+                    right: $baseSpacing;
+
+                    @include breakpoint(large) {
+                        display: none;
+                    }
+
+                    button {
+                        width: 34px;
+                        height: 34px;
+                        background: none;
+                        padding: 0;
+
+                        .icon {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        &:hover,
+                        &:focus,
+                        &.active {
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

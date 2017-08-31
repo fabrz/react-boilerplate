@@ -1,0 +1,3 @@
+# A Boilerplate for React & Redux projects
+
+More to come ...

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="80px" height="22px" viewBox="0 0 80 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>Cloud</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="How-to-play" transform="translate(-29.000000, -205.000000)" fill="#FDFDFD">
+            <g id="Section-01" transform="translate(-1077.000000, 71.000000)">
+                <g id="Image" transform="translate(1106.000000, 74.000000)">
+                    <g id="Clouds">
+                        <path d="M0,79.7087605 C7.954,80.3477605 12.354,73.0927605 20.269,72.3367605 C25.154,71.8697605 31.325,70.7257605 34.898,64.9657605 C39.292,57.8847605 49.946,58.5437605 54.055,65.8767605 C55.519,68.4907605 58.101,68.7427605 59.758,70.1477605 C65.345,74.8907605 72.105,76.3097605 78.527,78.7877605 C79.354,79.1067605 80.237,79.8637605 79.967,81.4587605 L0.559,81.4587605 C0.373,80.8757605 0.186,80.2917605 0,79.7087605" id="Cloud"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

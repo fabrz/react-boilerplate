@@ -1,0 +1,16 @@
+@mixin fadein {
+    @at-root {
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    }
+
+    animation-fill-mode: both;
+    animation-name: fadein;
+}

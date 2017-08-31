@@ -1,0 +1,24 @@
+@mixin flipouty {
+    @at-root {
+        @keyframes flipouty {
+            from {
+                transform: perspective(400px);
+            }
+
+            30% {
+                transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+                opacity: 1;
+            }
+
+            to {
+                transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+                opacity: 0;
+            }
+        }
+    }
+
+    animation-fill-mode: both;
+    animation-name: flipouty;
+    backface-visibility: visible !important;
+    animation-duration: 0.75s;
+}

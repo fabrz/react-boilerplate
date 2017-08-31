@@ -1,0 +1,17 @@
+@mixin fadeoutleftbig {
+    @at-root {
+        @keyframes fadeoutleftbig {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                transform: translate3d(-2000px, 0, 0);
+            }
+        }
+    }
+
+    animation-fill-mode: both;
+    animation-name: fadeoutleftbig;
+}

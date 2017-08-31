@@ -1,0 +1,50 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Laravel
+/public/storage
+/public/hot
+/public/mix-manifest.json
+/storage/*.key
+/vendor
+/.idea
+
+# Node
+/node_modules
+/npm-debug.log
+
+# Testing
+coverage
+
+# Production
+build
+
+# Homestead
+Homestead.json
+Homestead.yaml
+
+# Misc
+.DS_Store
+.env
+/public/apple-touch*
+/public/favicon*
+/public/mstile*
+/public/fb_share*
+
+# Sass
+.sass-cache
+scss-lint-report.xml
+
+# Hide generated files
+/public/_*
+
+# Storybook
+/public/storybook
+
+# Log
+/log/*.log
+storage/exports/
+
+# Yarn
+yarn-error.log

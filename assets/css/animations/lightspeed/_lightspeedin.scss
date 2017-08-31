@@ -1,0 +1,30 @@
+@mixin lightspeedin {
+    @at-root {
+        @keyframes lightspeedin {
+            from {
+                transform: translate3d(100%, 0, 0) skewX(-30deg);
+                opacity: 0;
+            }
+
+            60% {
+                transform: skewX(20deg);
+                opacity: 1;
+            }
+
+            80% {
+                transform: skewX(-5deg);
+                opacity: 1;
+            }
+
+            to {
+                transform: none;
+                opacity: 1;
+            }
+        }
+    }
+
+    animation-fill-mode: both;
+    animation-name: lightspeedin;
+    animation-timing-function: ease-out;
+    animation-duration: 0.75s;
+}

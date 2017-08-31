@@ -1,0 +1,17 @@
+@mixin slideinup {
+    @at-root {
+        @keyframes slideinup {
+            from {
+                transform: translate3d(0, 100%, 0);
+                visibility: visible;
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+
+    animation-fill-mode: both;
+    animation-name: slideinup;
+}

@@ -1,0 +1,18 @@
+/**
+ * Breakpoints
+ */
+$breakpointSmall: 20em; // 320px Mobile
+$breakpointMedium: 35em; // 560px // Tablet
+$breakpointLarge: 60em; // 960px // Desktop
+
+/**
+ * Paths
+ */
+$imagePath: '/_img';
+$fontPath: '/_fonts';
+
+$baseSpacing: 20px;
+
+$button-inputs: '.btn, .button, button, input[type=submit]';
+
+$baseBorderRadius: 5px;
