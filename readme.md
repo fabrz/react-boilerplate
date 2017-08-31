@@ -264,6 +264,10 @@ All you need to do is running `make install`
 
 Run `make webpack-watch`
 
+# Contribute
+
+Please create a PR towards `master` if you wish to contribute and improving the boilerplate.
+
 # Testing your app
 
 More to come ...

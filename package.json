@@ -2,6 +2,13 @@
   "name": "react-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/golincode/react-boilerplate.git"
+  },
+  "author": "Golin <fnasi@golin.com>",
+  "license": "Unlicense",
+  "homepage": "https://github.com/golincode/react-boilerplate#readme",
   "dependencies": {
     "aglio": "^2.3.0",
     "autoprefixer": "^6.6.1",
