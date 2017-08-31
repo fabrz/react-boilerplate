@@ -2,7 +2,7 @@
 
 ## Assets
 
-The `assets` folder will contain the folowing:
+The `assets` folder will contain the following:
 
 * css
 * fonts
