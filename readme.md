@@ -264,3 +264,6 @@ All you need to do is running `make install`
 
 Run `make webpack-watch`
 
+# Testing your app
+
+More to come ...
