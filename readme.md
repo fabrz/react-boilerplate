@@ -13,6 +13,12 @@ The `assets` folder will contain the following:
 
 The `css` within the `assets` folder will contain global css. Note that React discourages the usage of global css but I found useful to have a global configuration for `typography & fonts`, `normalize` and `breakpoints`.
 
+### React CSS Modules
+
+The Boilerplate uses `React CSS Modules` all of the CSS you will write in a specific component will apply to that compoennt only. The global css won't be able to override or interfer with the component's css because we also make use of `classnames`.
+
+`classnames` will append a prefix to each class name React uses. This way the global css won't override or interfer with the component's css.
+
 ### Fonts
 
 The `fonts` folder will contain all of the fonts used across the website and they will be compiled from webpack and then modularized in our `bundle.js`.
@@ -169,5 +175,92 @@ export default function toggleNavigationReducer(state = {}, action) {
 
 As you can see, this `switch` returns an object based on the action type (TOGGLE_NAVIGATION).
 
+### String Internationalization
 
+Let me put this out, this is not mandatory and it doesn't apply to all of the website you're going to build but I'd like to explain how this works.
+
+The string internationalization system will allow you to write some copy (used in the website) in JSON files. There is an helper function that will take care of abstracting the strings from the JSON files for you. You can reference the string in your component so there won't be any `hardcoded` strings.
+
+Example:
+
+This is the string you want to pull thru the fron-end.
+```
+{
+    "string": "translated string"
+}
+```
+
+Head to `./assets/react/helpers/strings.js` and import the json file at the top like this:
+
+```
+import general from '../strings/general.json';
+```
+
+Set the string, in the same file, right at the bottom like this:
+
+```
+setString('general', general);
+```
+
+Use the string somewhere in your component using the helper function (rembember to import the helper function in your React component)
+
+```
+import { getString } from '../helpers/strings';
+```
+
+```
+{getString('general.string')}
+```
+
+The above code will output some text:
+
+```
+translated string
+```
+
+### Router
+
+Routing our App is fairly easy. All the magic happens in `./assets/react/app.js`.
+
+```
+render((
+  <Provider store={store}>
+    <Router history={history} onUpdate={() => window.scrollTo(0, 0)}>
+      <Route path="/" component={App}>
+        <IndexRoute component={LandingPageContainer} />
+      </Route>
+    </Router>
+  </Provider>
+), document.getElementById('root'));
+```
+
+The Provider will host the Redux Store.
+
+#### Adding a new route
+
+```
+<Route path="/" component={ComponentNameContainer} />
+```
+
+All of your new routes will be placed within the main Route (`App`).
+
+### ESlint, SASSlint and generic configurations
+
+In order to keep our project tidy and well readable I'd use:
+
+* .editorcofig (it defines some basic rules for sass, php, js, json etc etc)
+* .eslintrc (it uses the AirBnb rules, it throws errors when writing ES6 code in your sublime file and when compiling with webpack)
+* .stylelintrc (it uses the AirBnb rules, it throws errors when writing sass in your sublime file and when compiling with webpack)
+
+# Installation
+
+## Prerequisites
+
+Make sure you have `yarn` installed globally and your version of `node` is at least `6.9.1` and you `npm` version at least `4.0.2`.
+
+All you need to do is running `make install`
+
+## Watching
+
+Run `make webpack-watch`
 

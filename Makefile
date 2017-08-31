@@ -1,3 +1,7 @@
+install:
+	yarn
+	webpack
+
 clean: clear-caches
 	@rm -f storage/logs/laravel.log
 
