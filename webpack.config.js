@@ -14,35 +14,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(css|scss|sass)$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                url: false,
-                modules: true,
-                importLoaders: 1,
-                localIdentName: '[name]_[local]',
-              },
-            },
-            {
-              loader: 'postcss-loader',
-            },
-            {
-              loader: 'sass-loader',
-            },
-            {
-              loader: 'sass-resources-loader',
-              options: {
-                resources: [
-                  path.join(__dirname, 'assets/css/screen.scss'),
-                ],
-              },
-            },
-          ],
-        }),
+        test: /\.scss$/,
+        include: path.join(__dirname, 'assets/react'),
+        use: [
+          'style-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.js$/,
@@ -94,9 +73,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin('../_css/screen.css', {
-      allChunks: true,
-    }),
+    new ExtractTextPlugin('[name].bundle.[chunkhash].css'),
     new StyleLintPlugin({
       files: ['**/*.s?(a|c)ss'],
       syntax: 'scss',

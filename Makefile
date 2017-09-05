@@ -1,9 +1,28 @@
 install:
 	yarn
+	css
+	webpack
+	watch-css
+
+build:
+	clean
+	yarn
+	css
 	webpack
 
-clean: clear-caches
-	@rm -f storage/logs/laravel.log
+clean:
+	@rm -rf ./public/_css
+	@rm -rf ./public/_js
+	@rm -rf ./public/_fonts
+	@rm -rf ./public/_img
+
+css:
+	@mkdir -p ./public/_css
+	node ./node_modules/.bin/node-sass ./assets/css -o ./public/_css
+	@node ./assetsScripts/css.js --directory ./public/_css/**/*
+
+watch-css:
+	@node ./assetsScripts/watch.js "./assets/css/**/*"
 
 webpack-dev:
 	node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js
