@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cssModules from 'react-css-modules';
-import SVGInline from 'react-svg-inline';
 import classNames from 'classnames';
+import { FormattedMessage } from 'react-intl';
 
-import { getImage } from '../../helpers/general';
+import messages from './messages';
 import styles from './Navigation.scss';
 
 const Navigation = (props) => {
@@ -43,7 +43,7 @@ const Navigation = (props) => {
             </li>
             <li>
               <button onClick={event => onClickItem(event, '/page')}>
-                Page
+                <FormattedMessage {...messages.page} />
               </button>
             </li>
           </ul>
