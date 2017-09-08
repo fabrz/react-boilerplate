@@ -4,7 +4,39 @@
 @import './assets/css/base/colors';
 @import './assets/css/base/fonts';
 @import './assets/css/base/base';
+@import './assets/css/base/helpers';
 
 .landing {
     position: relative;
+    width: 100%;
+    height: 100vh;
+
+    div {
+        @include center(xy);
+
+        width: 100%;
+
+        ul {
+            @extend .flex-container;
+            @extend .flex-container--wrap;
+            @extend .flex-container--align-center;
+
+            width: 100%;
+            padding: 0;
+
+            li {
+                flex: 0 1 auto;
+                width: 25%;
+
+                span {
+                    width: 100%;
+                    display: block;
+
+                    svg {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }

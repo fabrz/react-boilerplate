@@ -2,11 +2,43 @@
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
 
-/**
- * Clear inner floats
- */
-.clearfix::after {
-    clear: both;
-    content: '';
-    display: table;
+// FLEX RULES
+.flex-container {
+    display: flex;
+}
+
+.flex-container--wrap {
+    flex-wrap: wrap;
+}
+
+.flex-container--nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-container--horizontal {
+    flex-direction: row;
+}
+
+.flex-container--horizontal-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-container--vertical {
+    flex-direction: column;
+}
+
+.flex-container--vertical-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-container--center {
+    justify-content: center;
+}
+
+.flex-container--space-between {
+    justify-content: space-between;
+}
+
+.flex-container--align-center {
+    align-items: center;
 }
