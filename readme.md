@@ -243,6 +243,8 @@ import messages from './messages';
 <FormattedMessage {...messages.page} />
 ```
 
+Note: If you do not need this plugin you can remove the `<IntlProvider>` component from the React Router Tree in `assets/react/app.js`
+
 ### Router
 
 Routing our App is fairly easy. All the magic happens in `./assets/react/app.js`.
