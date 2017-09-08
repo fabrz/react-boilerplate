@@ -14,6 +14,12 @@ export const appLocales = [
   'it',
 ];
 
+/**
+ * Format the strings to translate
+ * @param  {String} locale   The locale as a String.
+ * @param  {JSON}   messages The strings as JSON.
+ * @return {Object}          The mapped strings as Object.
+ */
 export const formatTranslationMessages = (locale, messages) => {
   const defaultFormattedMessages = locale !== DEFAULT_LOCALE
     ? formatTranslationMessages(DEFAULT_LOCALE, enTranslationMessages)

@@ -1,10 +1,11 @@
 /**
- * [setLocale description]
- * @param {[type]} lang [description]
+ * Set the App locale
+ * @param {String} locale The locale as a String.
+ * @return {Object}       Action data
  */
-export function setLocale(lang) {
+export function setLocale(locale) {
   return {
-    lang,
+    locale,
     type: 'SET_LOCALE',
   };
 }
