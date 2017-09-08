@@ -1,14 +1,20 @@
 install:
 	yarn
-	css
-	webpack
-	watch-css
+	make css
+	make webpack
+	make watch-css
 
 build:
-	clean
+	make clean
+	make css
+	make webpack
+	make watch-css
+
+build_prod:
+	make clean
 	yarn
-	css
-	webpack
+	make css
+	make webpack-production
 
 clean:
 	@rm -rf ./public/_css
@@ -29,6 +35,7 @@ webpack-dev:
 
 webpack:
 	node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress
+
 
 webpack-hot:
 	node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot
