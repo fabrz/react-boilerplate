@@ -8,10 +8,12 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers/index';
 
 // Default States
+import intl from './data/intl';
 import navigation from './data/navigation';
 
 // create an object for the default data
 const defaultState = {
+  intl,
   navigation,
 };
 
