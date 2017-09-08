@@ -5,9 +5,11 @@ import * as actionCreators from '../../redux/actions';
 import Main from '../Main/Main';
 
 function mapStateToProps({
+  intl,
   navigation,
 }) {
   return {
+    intl,
     navigation,
   };
 }
