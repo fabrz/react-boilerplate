@@ -175,11 +175,9 @@ export default function toggleNavigationReducer(state = {}, action) {
 
 As you can see, this `switch` returns an object based on the action type (TOGGLE_NAVIGATION).
 
-### String Internationalization
+### Strings
 
-Let me put this out, this is not mandatory and it doesn't apply to all of the website you're going to build but I'd like to explain how this works.
-
-The string internationalization system will allow you to write some copy (used in the website) in JSON files. There is an helper function that will take care of abstracting the strings from the JSON files for you. You can reference the string in your component so there won't be any `hardcoded` strings.
+The string system will allow you to write some copy (used in the website) in JSON files. There is an helper function that will take care of abstracting the strings from the JSON files for you. You can reference the string in your component so there won't be any `hardcoded` strings.
 
 Example:
 
@@ -216,6 +214,33 @@ The above code will output some text:
 
 ```
 translated string
+```
+
+### React i18n Internationalisation
+
+You can translate your App making use of `react-intl`. All you need to do is:
+
+* Add a new locale in `assets/react/i18n.js`
+* Add a new JSON file in `assets/react/translations`
+* Create a `messages/index.js` within the component you wish to translate and reference the strings you want to translate like so:
+
+```
+import { defineMessages } from 'react-intl';
+
+export default defineMessages({
+  page: {
+    id: 'boilerplate.components.Navigation.item.page',
+    defaultMessage: 'Page',
+  },
+});
+```
+* Translate the strings in the component:
+
+```
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
+
+<FormattedMessage {...messages.page} />
 ```
 
 ### Router
