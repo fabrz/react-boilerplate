@@ -43,7 +43,7 @@ module.exports = (config) => {
     webpack: webpackConfig,
 
     webpackServer: {
-      noInfo: true, //please don't spam the console when running in karma!
+      noInfo: true, // please don't spam the console when running in karma!
     },
 
     reporters: ['progress'],
