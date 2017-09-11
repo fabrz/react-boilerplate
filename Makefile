@@ -27,6 +27,9 @@ css:
 	node ./node_modules/.bin/node-sass ./assets/css -o ./public/_css
 	@node ./assetsScripts/css.js --directory ./public/_css/**/*
 
+start:
+	node ./node_modules/.bin/http-server public
+
 watch-css:
 	@node ./assetsScripts/watch.js "./assets/css/**/*"
 
