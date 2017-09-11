@@ -1,5 +1,25 @@
 # A Boilerplate for React & Redux projects
 
+# Installation & Prerequisites
+
+Make sure you have `yarn` installed globally and your version of `node` is at least `6.9.1` and you `npm` version at least `4.0.2`.
+
+### Configure the app using ExpressJS:
+
+* Run make install
+* Run make start. A list of available servers will appear in your terminal. Visit one of those to see the app.
+
+### Configure the app using vagrant:
+
+* Update your Homestead yaml file.
+* Update your hosts.
+* Provision you homestead.
+* Run `make install` and visit the url you've setup in your yaml file.
+
+### Watching your app:
+
+Run `make webpack-watch`
+
 ## Assets
 
 The `assets` folder will contain the following:
@@ -278,28 +298,6 @@ In order to keep our project tidy and well readable I'd use:
 * .editorcofig (it defines some basic rules for sass, php, js, json etc etc)
 * .eslintrc (it uses the AirBnb rules, it throws errors when writing ES6 code in your sublime file and when compiling with webpack)
 * .stylelintrc (it uses the AirBnb rules, it throws errors when writing sass in your sublime file and when compiling with webpack)
-
-# Installation
-
-## Prerequisites
-
-Make sure you have `yarn` installed globally and your version of `node` is at least `6.9.1` and you `npm` version at least `4.0.2`.
-
-### Configure the app using ExpressJS:
-
-* Run make install
-* Run make start. A list of available servers will appear in your terminal. Visit one of those to see the app.
-
-### Configure the app using vagrant:
-
-* Update your Homestead yaml file.
-* Update your hosts.
-* Provision you homestead.
-* Run `make install` and visit the url you've setup in your yaml file.
-
-## Watching
-
-Run `make webpack-watch`
 
 # Contribute
 
