@@ -285,7 +285,17 @@ In order to keep our project tidy and well readable I'd use:
 
 Make sure you have `yarn` installed globally and your version of `node` is at least `6.9.1` and you `npm` version at least `4.0.2`.
 
-All you need to do is running `make install`
+### Configure the app using ExpressJS:
+
+* Run make install
+* Run make start. A list of available servers will appear in your terminal. Visit one of those to see the app.
+
+### Configure the app using vagrant:
+
+* Update your Homestead yaml file.
+* Update your hosts.
+* Provision you homestead.
+* Run `make install` and visit the url you've setup in your yaml file.
 
 ## Watching
 
