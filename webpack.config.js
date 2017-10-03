@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: ['babel-polyfill', './assets/react/app.js'],
@@ -73,11 +72,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin('[name].bundle.[chunkhash].css'),
-    new StyleLintPlugin({
-      files: ['**/*.s?(a|c)ss'],
-      syntax: 'scss',
-    }),
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: [
@@ -87,15 +81,33 @@ module.exports = {
         output: { path: './' },
       },
     }),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   sourceMap: true,
-    //   compress: {
-    //     warnings: false,
-    //     drop_console: true,
-    //   },
-    // }),
   ],
   watchOptions: {
     poll: true,
   },
 };
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.plugins = module.exports.plugins.concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"',
+      },
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      compress: {
+        warnings: false,
+        drop_console: true,
+      },
+    }),
+  ]);
+} else {
+  const StyleLintPlugin = require('stylelint-webpack-plugin');
+  module.exports.plugins = module.exports.plugins.concat([
+    new StyleLintPlugin({
+      files: ['**/*.s?(a|c)ss'],
+      syntax: 'scss',
+    }),
+  ]);
+}
