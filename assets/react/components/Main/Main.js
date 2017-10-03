@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import NavigationContainer from '../Navigation/NavigationContainer';
 import FooterContainer from '../Footer/FooterContainer';
@@ -18,7 +19,7 @@ const Main = (props) => (
 );
 
 Main.propTypes = {
-  children: React.PropTypes.any,
+  children: PropTypes.any,
 };
 
 export default Main;
