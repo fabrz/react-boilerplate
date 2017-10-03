@@ -4,11 +4,11 @@ install:
 	make webpack
 	make watch-css
 
-build:
+build_stage:
 	make clean
+	yarn
 	make css
-	make webpack
-	make watch-css
+	make webpack-dev
 
 build_prod:
 	make clean
@@ -25,13 +25,13 @@ clean:
 css:
 	@mkdir -p ./public/_css
 	node ./node_modules/.bin/node-sass ./assets/css -o ./public/_css
-	@node ./assetsScripts/css.js --directory ./public/_css/**/*
+	@node ./scripts/css.js --directory ./public/_css/**/*
 
 start:
 	node ./node_modules/.bin/http-server public
 
 watch-css:
-	@node ./assetsScripts/watch.js "./assets/css/**/*"
+	@node ./scripts/watch.js "./assets/css/**/*"
 
 webpack-dev:
 	node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js
